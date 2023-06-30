@@ -44,10 +44,16 @@ body {
 }
 
 .ButtonImg {
-  background-color: #ffffff00;
+  background-color: rgba(255, 255, 255, 0.059);
   color: #342a40;
   border-radius: 0.2rem;
   cursor: pointer;
+  border: 1px solid black;
+  
+  width: 344px;
+  height: 168px;
+  padding-right: 200px;
+  margin: 30px;
 }
 
 .ButtonImg:hover {
@@ -63,12 +69,14 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.ContainerCharsImmg {
+
+.ContainerChars {
   line-height: 2rem;
   text-align: center;
   display: flex;
   align-items: center;
   align-self: center;
   flex-direction: row;
-  flex: 0;
+  flex-flow: row wrap;
+  justify-content: center;
 }

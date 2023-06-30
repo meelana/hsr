@@ -21,136 +21,210 @@
         Поехали!
       </button>
     </div>
-    <div class="ContainerCharsImg">
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/arlan.png"/> <!--1-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/asta.png"/> <!--2-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/bailu.png"/> <!--3-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/blade.png"/> <!--4-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/bronya.png"/> <!--5-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/clara.png"/> <!--6-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/danheng.png"/> <!--7-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/fuxuan.png"/> <!--8-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/gepard.png"/> <!--9-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/herta.png"/> <!--10-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/himeko.png"/> <!--11-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/hook.png"/> <!--12-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/jingyuan.png"/> <!--13-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsiImg" src="./img/chars/kafka.png"/> <!--14-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/loucha.png"/> <!--15-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/luka.png"/> <!--16-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/mart7th.png"/> <!--17-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/natasha.png"/> <!--18-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/pela.png"/> <!--19-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/qingque.png"/> <!--20-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/sampo.png"/> <!--21-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/seele.png"/> <!--22-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/serval.png"/> <!--23-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/silverwolf.png"/> <!--24-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/sushang.png"/> <!--25-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/tingyun.png"/> <!--26-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/trailblazerthedestruction.gif"/> <!--27-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/trailblazerthepreservation.gif"/> <!--28-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/welt.png"/> <!--29-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/yanqing.png"/> <!--30-->
-      </button>
-
-      <button class="ButtonImg">
-        <img class="CharsImg" src="./img/chars/yukong.png"/> <!--31-->
-      </button>
-
+    <div class="ContainerChars">
+    </div>
+    <div class="ContainerPaths">
     </div>
     <script>
       document.querySelector('.Button').addEventListener('click', () => {
         alert('Go');
       });
+    </script>
+    <script>
+      const chars = [
+        {
+          name: 'arlan',
+          path: 'destruction'
+        },
+        {
+          name: 'asta',
+          path: 'harmony'
+        },
+        {
+          name: 'bailu',
+          path: 'abundance'
+        },
+        {
+          name: 'blade',
+          path: 'destruction'
+        },
+        {
+          name: 'bronya',
+          path: 'harmony'
+        },
+        {
+          name: 'clara',
+          path: 'destruction'
+        },
+        {
+          name: 'danheng',
+          path: 'hunt'
+        },
+        {
+          name: 'fuxuan',
+          path: 'preservation'
+        },
+        {
+          name: 'gepard',
+          path: 'preservation'
+        },
+        {
+          name: 'herta',
+          path: 'erudition'
+        },
+        {
+          name: 'himeko',
+          path: 'erudition'
+        },
+        {
+          name: 'hook',
+          path: 'destruction'
+        },
+        {
+          name: 'jingyuan',
+          path: 'erudition'
+        },
+        {
+          name: 'kafka',
+          path: 'nihility'
+        },
+        {
+          name: 'loucha',
+          path: 'abundance'
+        },
+        {
+          name: 'luka',
+          path: 'nihility'
+        },
+        {
+          name: 'mart7th',
+          path: 'preservation'
+        },
+        {
+          name: 'natasha',
+          path: 'abundance'
+        },
+        {
+          name: 'pela',
+          path: 'nihility'
+        },
+        {
+          name: 'qingque',
+          path: 'erudition'
+        },
+        {
+          name: 'sampo',
+          path: 'nihility'
+        },
+        {
+          name: 'seele',
+          path: 'hunt'
+        },
+        {
+          name: 'serval',
+          path: 'erudition'
+        },
+        {
+          name: 'silverwolf',
+          path: 'nihility'
+        },
+        {
+          name: 'sushang',
+          path: 'hunt'
+        },
+        {
+          name: 'tingyun',
+          path: 'harmony'
+        },
+        {
+          name: 'trailblazerthedestruction',
+          path: 'destruction'
+        },
+        {
+          name: 'trailblazerthepreservation',
+          path: 'preservation'
+        },
+        {
+          name: 'welt',
+          path: 'nihility'
+        },
+        {
+          name: 'yanqing',
+          path: 'hunt'
+        },
+        {
+          name: 'yukong',
+          path: 'harmony'
+        }
+      ];
+
+      const container = document.querySelector('.ContainerChars');
+      let html = '';
+
+      for (const char of chars) {
+        const charHTML = `
+          <button class="ButtonImg">
+            <img class="CharsImg" src="./img/chars/${char.name}.png"/>
+          </button>
+
+        `;
+        html = charHTML+html;
+      }
+      container.innerHTML = html;
+      </script>
+
+      <script>
+      const paths = [
+        {
+          name: 'abundance'
+        },
+        {
+          name: 'destruction'
+        },
+        {
+          name: 'erudution'
+        },
+        {
+          name: 'harmony'
+        },
+        {
+          name: 'hunt'
+        },
+        {
+          name: 'nihility'
+        },
+        {
+          name: 'preservation'
+        }
+        ];
+
+      const container = document.querySelector('.ContainerPaths');
+      let htmlpaths = '';
+
+      for (const path of paths) {
+        const pathHTML = `
+          <button class="ButtonImg">
+            <img class="PathsImg" src="./img/paths/${path.name}.png"/>
+          </button>
+
+        `;
+        htmlpaths = pathHTML+htmlpaths;
+      }
+      container.innerHTML = htmlpaths;
+                
+      /*
+      <button class="ButtonImg">
+        <img class="PathsImg" src="./img/paths/bronya.png"/> <!--5-->
+      </button>
+      */
+
+      /*
+      1. Добавить всех чаров +
+      2. Прочитать про маржин, паддинг: https://doka.guide/css/box-model/
+      3. Стилизовать карточку как на сайте михойи — border, ширина, и т.п.
+      4. На каждой карточке проставить в углу правом класс персонажа картинкой.
+      */
+
     </script>
   </body>
 </html>
