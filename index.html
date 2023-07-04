@@ -22,9 +22,10 @@
       </button>
     </div>
     <div class="ContainerChars">
+      <div class="ContainerPaths">
+      </div>
     </div>
-    <div class="ContainerPaths">
-    </div>
+    
     <script>
       document.querySelector('.Button').addEventListener('click', () => {
         alert('Go');
@@ -158,22 +159,7 @@
         }
       ];
 
-      const container = document.querySelector('.ContainerChars');
-      let html = '';
-
-      for (const char of chars) {
-        const charHTML = `
-          <button class="ButtonImg">
-            <img class="CharsImg" src="./img/chars/${char.name}.png"/>
-          </button>
-
-        `;
-        html = charHTML+html;
-      }
-      container.innerHTML = html;
-      </script>
-
-      <script>
+      
       const paths = [
         {
           name: 'abundance'
@@ -196,22 +182,23 @@
         {
           name: 'preservation'
         }
-        ];
+      ];
 
-      const container = document.querySelector('.ContainerPaths');
-      let htmlpaths = '';
+      const container = document.querySelector('.ContainerChars');
 
-      for (const path of paths) {
-        const pathHTML = `
-          <button class="ButtonImg">
-            <img class="PathsImg" src="./img/paths/${path.name}.png"/>
+      for (const char of chars) {
+        const charHTML = `
+          <button class="CharCard">
+            <img class="CharCardPic" src="./img/chars/${char.name}.png"/>
+            <img class="CharCardPath" src="./img/paths/${char.path}.png"/>
           </button>
 
         `;
-        htmlpaths = pathHTML+htmlpaths;
+        container.innerHTML += charHTML;
       }
-      container.innerHTML = htmlpaths;
-                
+      </script>
+
+      <script>
       /*
       <button class="ButtonImg">
         <img class="PathsImg" src="./img/paths/bronya.png"/> <!--5-->
