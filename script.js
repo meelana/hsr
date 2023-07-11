@@ -4,109 +4,119 @@ const chars = [
     name: 'arlan',
     namecard: 'Arlan',
     path: 'destruction',
-    pathcard: 'The Destruction'
+    pathcard: 'The Destruction' 
   },
   {
     name: 'asta',
     namecard: 'Asta',
     path: 'harmony',
-    pathcard: 'The Harmony'
+    pathcard: 'The Harmony' 
   },
   {
     name: 'bailu',
     namecard: 'Bailu',
     path: 'abundance',
-    pathcard: 'The Abundance'
+    pathcard: 'The Abundance',
+    rarity: true
   },
   {
     name: 'blade',
     namecard: 'Blade',
     path: 'destruction',
-    pathcard: 'The Destruction'
+    pathcard: 'The Destruction',
+    rarity: true
   },
   {
     name: 'bronya',
     namecard: 'Bronya',
     path: 'harmony',
-    pathcard: 'The Harmony'
+    pathcard: 'The Harmony',
+    rarity: true
   },
   {
     name: 'clara',
     namecard: 'Clara',
     path: 'destruction',
-    pathcard: 'The Destruction'
+    pathcard: 'The Destruction',
+    rarity: true
   },
   {
     name: 'danheng',
     namecard: 'Dan Heng',
     path: 'hunt',
-    pathcard: 'The Hunt'
+    pathcard: 'The Hunt' 
   },
   {
     name: 'fuxuan',
     namecard: 'Fu Xuan',
     path: 'preservation',
-    pathcard: 'The Preservation'
+    pathcard: 'The Preservation',
+    rarity: true
   },
   {
     name: 'gepard',
     namecard: 'Gepard',
     path: 'preservation',
-    pathcard: 'The Preservation'
+    pathcard: 'The Preservation',
+    rarity: true
   },
   {
     name: 'herta',
     namecard: 'Herta',
     path: 'erudition',
-    pathcard: 'The Erudition'
+    pathcard: 'The Erudition' 
   },
   {
     name: 'himeko',
     namecard: 'Himeko',
     path: 'erudition',
-    pathcard: 'The Erudition'
+    pathcard: 'The Erudition',
+    rarity: true
   },
   {
     name: 'hook',
     namecard: 'Hook',
     path: 'destruction',
-    pathcard: 'The Destruction'
+    pathcard: 'The Destruction' 
   },
   {
     name: 'jingyuan',
     namecard: 'Jing Yuan',
     path: 'erudition',
-    pathcard: 'The Erudition'
+    pathcard: 'The Erudition',
+    rarity: true
   },
   {
     name: 'kafka',
     namecard: 'Kafka',
     path: 'nihility',
-    pathcard: 'The Nihility'
+    pathcard: 'The Nihility',
+    rarity: true
   },
   {
     name: 'loucha',
     namecard: 'Loucha',
     path: 'abundance',
-    pathcard: 'The Abundance'
+    pathcard: 'The Abundance',
+    rarity: true
   },
   {
     name: 'luka',
     namecard: 'Luka',
     path: 'nihility',
-    pathcard: 'The Nihility'
+    pathcard: 'The Nihility' 
   },
   {
     name: 'mart7th',    
     namecard: 'March 7th',
     path: 'preservation',
-    pathcard: 'The Preservation'
+    pathcard: 'The Preservation' 
   },
   {
     name: 'natasha',
     namecard: 'Natasha',
     path: 'abundance',
-    pathcard: 'The Abundance'
+    pathcard: 'The Abundance' 
   },
   {
     name: 'pela',
@@ -118,69 +128,75 @@ const chars = [
     name: 'qingque',
     namecard: 'Qingque',
     path: 'erudition',
-    pathcard: 'The Erudition'
+    pathcard: 'The Erudition' 
   },
   {
     name: 'sampo',
     namecard: 'Sampo',
     path: 'nihility',
-    pathcard: 'The Nihility'
+    pathcard: 'The Nihility' 
   },
   {
     name: 'seele',
     namecard: 'Seele',
     path: 'hunt',
-    pathcard: 'The Hunt'
+    pathcard: 'The Hunt',
+    rarity: true
   },
   {
     name: 'serval',
     namecard: 'Serval',
     path: 'erudition',
-    pathcard: 'The Erudition'
+    pathcard: 'The Erudition' 
   },
   {
     name: 'silverwolf',
     namecard: 'Silver Wolf',
     path: 'nihility',
-    pathcard: 'The Nihility'
+    pathcard: 'The Nihility',
+    rarity: true
   },
   {
     name: 'sushang',
     namecard: 'Sushang',
     path: 'hunt',
-    pathcard: 'The Hunt'
+    pathcard: 'The Hunt' 
   },
   {
     name: 'tingyun',
     namecard: 'Tingyun',
     path: 'harmony',
-    pathcard: 'The Harmony'
+    pathcard: 'The Harmony' 
   },
   {
     name: 'trailblazerthedestruction',
     namecard: 'Trailblazer - the Destruction',
     path: 'destruction',
     pathcard: 'The Destruction',
-    trailblazer: true
+    trailblazer: true,
+    rarity: true
   },
   {
     name: 'trailblazerthepreservation',
     namecard: 'Trailblazer - the Preservation',
     path: 'preservation',
     pathcard: 'The Preservation',
-    trailblazer: true
+    trailblazer: true,
+    rarity: true
   }, 
   {
     name: 'welt',
     namecard: 'Welt',
     path: 'nihility',
-    pathcard: 'The Nihility'
+    pathcard: 'The Nihility',
+    rarity: true
   },
   {
     name: 'yanqing',
     namecard: 'Yanqing',
     path: 'hunt',
-    pathcard: 'The Hunt'
+    pathcard: 'The Hunt',
+    rarity: true
   },
   {
     name: 'yukong',
@@ -222,6 +238,7 @@ function charHTML (char) {
           
           ${charPic(char)}
 
+
           <div class="CharCardRight">
 
             <div class="CharCardRightTop">
@@ -244,8 +261,11 @@ function charHTML (char) {
 function charPic(char) {
   let ext;
   if (char.trailblazer) {ext = "gif"} else {ext = "png"}
-  return `
-    <img class="CharCardPic" src="./img/chars/${char.name}.${ext}"/>`;
+  
+  return `if (char.rarity) { 
+    <img class="CharCardPic" src="./img/chars/${char.name}.${ext}"/>;}
+    else {
+    <img class="CharCardPicBack" src="./img/chars/${char.name}.${ext}"/>}`;
 }
 
 
