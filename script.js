@@ -270,8 +270,35 @@ function charPic(char) {
   return `<img class="CharCardPic CharCardPicGradient${gradient}" src="./img/chars/${char.name}.${ext}"/>`;
 }
 
+
 const container = document.querySelector('.ContainerChars');
 
 for (const char of chars) {
     container.innerHTML += charHTML(char);;
 }
+
+
+const charCards = document.querySelectorAll('.CharCard');
+
+// let i = 0;
+// for (const charCard of charCards) {
+//   charCard.onclick = function() {
+//     console.log(chars.name)
+//   }
+//   i++;
+// }
+
+let i = 0;
+while (i < chars.length) {
+  let j = i;
+  const charCard = charCards[j];
+  charCard.onclick = function() {
+    alert(chars[j].name)
+  } 
+  
+  i++
+}
+
+// for (let i = 0; i < charCards.length; i++) {
+//   ...
+// }
