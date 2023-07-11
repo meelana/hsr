@@ -206,38 +206,35 @@ const chars = [
   }
 ];
 
-
-const paths = [
-  {
-    name: 'abundance'
-  },
-  {
-    name: 'destruction'
-  },
-  {
-    name: 'erudition'
-  },
-  {
-    name: 'harmony'
-  },
-  {
-    name: 'hunt'
-  },
-  {
-    name: 'nihility'
-  },
-  {
-    name: 'preservation'
-  }
-];
+// const paths = [
+//   {
+//     name: 'abundance'
+//   },
+//   {
+//     name: 'destruction'
+//   },
+//   {
+//     name: 'erudition'
+//   },
+//   {
+//     name: 'harmony'
+//   },
+//   {
+//     name: 'hunt'
+//   },
+//   {
+//     name: 'nihility'
+//   },
+//   {
+//     name: 'preservation'
+//   }
+// ];
 
 function charHTML (char) {
   let charHTML;
       charHTML = `
         <button class="CharCard">
-          
           ${charPic(char)}
-
 
           <div class="CharCardRight">
 
@@ -246,13 +243,12 @@ function charHTML (char) {
             </div>
 
             <div class="CharCardRightBottom">
-            <img class="CharCardRightBottomImg" src="./img/paths/pathsname/${char.path}.png"/>
-            ${char.pathcard}
+              <img class="CharCardRightBottomImg" src="./img/paths/pathsname/${char.path}.png"/>
+              ${char.pathcard}
             </div>
           </div>
         
-          <img class="CharCardPath" src="./img/paths/${char.path}.png"/>
-          
+          <img class="CharCardPath" src="./img/paths/${char.path}.png"/>          
         </button>        
       `;
       return charHTML;
@@ -261,13 +257,18 @@ function charHTML (char) {
 function charPic(char) {
   let ext;
   if (char.trailblazer) {ext = "gif"} else {ext = "png"}
-  
-  return `if (char.rarity) { 
-    <img class="CharCardPic" src="./img/chars/${char.name}.${ext}"/>;}
-    else {
-    <img class="CharCardPicBack" src="./img/chars/${char.name}.${ext}"/>}`;
-}
 
+  let gradient;
+  switch (char.rarity) {
+    case true:
+      gradient = 'Yellow';
+      break;
+    default:
+      gradient = 'Purple';
+      break;
+  }
+  return `<img class="CharCardPic CharCardPicGradient${gradient}" src="./img/chars/${char.name}.${ext}"/>`;
+}
 
 const container = document.querySelector('.ContainerChars');
 
